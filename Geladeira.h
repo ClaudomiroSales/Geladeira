@@ -8,10 +8,13 @@ public:
     ~Geladeira();
     
     void ligar( );
+    void incTemperatura( );
+    void decTemperatura( );
     
 private:
 
-    bool onoff;
+    bool onoff;    
+    float temperatura;
 
 };
 
