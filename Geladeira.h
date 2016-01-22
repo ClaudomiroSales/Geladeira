@@ -6,6 +6,12 @@ class Geladeira
 public:
     Geladeira();
     ~Geladeira();
+    
+    void ligar( );
+    
+private:
+
+    bool onoff;
 
 };
 
