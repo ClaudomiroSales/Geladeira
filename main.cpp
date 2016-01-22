@@ -13,6 +13,12 @@ int main(int argc, char **argv)
     
     consol.decTemperatura( );
     
+    consol.decTemperatura( );
+    
+    consol.decTemperatura( );
+    
+    consol.mostrarStatus( );
+    
 
         
 	return 0;
