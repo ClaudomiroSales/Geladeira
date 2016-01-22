@@ -50,3 +50,13 @@ void Geladeira::decTemperatura( )
     else 
          cout << "Tentando diminuir temperatura mas a geladeira estah desligada.\n";
 }
+
+
+void Geladeira::mostrarStatus( ) const
+{
+    if( onoff )
+        cout << "Geladeira codigo HHHH funcionando corretamente. A temperatura interna eh " << temperatura
+             << ". Faltam X dias para fazer a manuntecao preventiva!\n";
+    else
+        cout << "Geladeira desligada.\n";
+}

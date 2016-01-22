@@ -10,6 +10,7 @@ public:
     void ligar( );
     void incTemperatura( );
     void decTemperatura( );
+    void mostrarStatus( ) const;
     
 private:
 
