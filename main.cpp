@@ -9,15 +9,21 @@ int main(int argc, char **argv)
     
     consol.ligar( );
     
-    consol.incTemperatura( );
+    //Lista vázia
+    consol.listarCompras();
     
-    consol.decTemperatura( );
+      cout << "\nCadastrando compras...\n";
     
-    consol.decTemperatura( );
+    consol.cadastrarCompra("aveia",0);
+    consol.cadastrarCompra("trigo",1);
+    consol.cadastrarCompra("pao",2);
     
-    consol.decTemperatura( );
+    cout << "Lista de compras preenchida.\n\n";
     
-    consol.mostrarStatus( );
+    consol.listarCompras();
+    
+    cout << "\n\n";
+    consol.cadastrarCompra("pao",4);
     
 
         
