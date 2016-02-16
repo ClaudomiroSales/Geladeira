@@ -16,12 +16,23 @@ public:
     void mostrarStatus( ) const;
     void cadastrarCompra( string, int );
     void listarCompras( ) const;
+    void registarDefeito( );
+    
+    static void statusTodasGeladeiraConstruidas( );
+    
+    //Outro método static
+    static double calcCustoManutencao( double );
     
 private:
 
     bool onoff;    
     float temperatura;
-    string listaCompras[3];        
+    bool indicadorDefeito;//Indica se a geladeira está com defeito
+    bool emManutencao; //Indica se a geladeira está em manutenção
+    string listaCompras[3]; 
+
+    static int quantGeladDefeito;
+    static int quantGeladeiraEmManutencao;
     
 
 };

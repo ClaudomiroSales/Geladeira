@@ -5,25 +5,18 @@ using std::cout;
 
 int main(int argc, char **argv)
 {
-    Geladeira consol;
+    Geladeira consol, brastemp;
     
     consol.ligar( );
+    brastemp.ligar( );
     
-    //Lista vázia
-    consol.listarCompras();
+    consol.registarDefeito();
+    brastemp.registarDefeito();
     
-      cout << "\nCadastrando compras...\n";
+    //Usando membro static no main
+    Geladeira::statusTodasGeladeiraConstruidas();
     
-    consol.cadastrarCompra("aveia",0);
-    consol.cadastrarCompra("trigo",1);
-    consol.cadastrarCompra("pao",2);
-    
-    cout << "Lista de compras preenchida.\n\n";
-    
-    consol.listarCompras();
-    
-    cout << "\n\n";
-    consol.cadastrarCompra("pao",4);
+    cout << "O gasto da empresa com manutencao foi R$ " << Geladeira::calcCustoManutencao( 100.0 ) << '\n';
     
 
         

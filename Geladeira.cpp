@@ -3,8 +3,13 @@
 #include <iostream>
 using std::cout;
 
+
+int Geladeira::quantGeladDefeito = 0;
+
 Geladeira::Geladeira()
 {
+    quantGeladDefeito = 0;
+    
     onoff = false;
     temperatura = 0;
     
@@ -18,8 +23,19 @@ Geladeira::~Geladeira()
 }
 
 
+void Geladeira::statusTodasGeladeiraConstruidas( ) 
+{
+    cout << "Atualmente " << quantGeladDefeito << " estao com defeito.\n";
+}
+
+double Geladeira::calcCustoManutencao( double custoUnitario )
+{
+    return quantGeladDefeito * custoUnitario;
+}
+
 void Geladeira::ligar( )
 {
+     
     if ( !onoff )
     {
         onoff = true;
@@ -27,6 +43,12 @@ void Geladeira::ligar( )
     }
     else
         cout << "Aparelho jah estava ligado" << '\n';    
+}
+
+void Geladeira::registarDefeito( )
+{
+    indicadorDefeito = true;
+    quantGeladDefeito++;
 }
 
 
