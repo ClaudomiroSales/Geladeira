@@ -24,6 +24,9 @@ public:
     void adicionarResidentes( const string & );
     
     
+    void listarResidentes( ) const;
+    
+    
     
 private:
 
@@ -34,6 +37,8 @@ private:
     
     string *residentes; //Quem mora na casa
     int numResidentes;
+    
+    
 
 };
 

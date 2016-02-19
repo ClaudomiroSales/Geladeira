@@ -107,3 +107,13 @@ void Geladeira::adicionarResidentes(const string &novoResidente)
         residentes[0] = novoResidente;
     }
 }
+
+void Geladeira::listarResidentes( ) const
+{
+    if ( numResidentes > 0)
+        for(int i = 0; i < numResidentes-1; i++)
+            cout << residentes[ i ] << '\n';
+     else
+         cout << "Nenhum residente cadastrado.";
+    
+}
