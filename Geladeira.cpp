@@ -116,8 +116,11 @@ void Geladeira::adicionarResidentes(const string &novoResidente)
 void Geladeira::listarResidentes( ) const
 {
     if ( numResidentes > 0)
+    {
+        cout << "Os residentes sao: \n";
         for(int i = 0; i < numResidentes; i++)
             cout << residentes[ i ] << '\n';
+    }
      else
          cout << "Nenhum residente cadastrado.";
     
