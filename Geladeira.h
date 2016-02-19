@@ -16,6 +16,8 @@ public:
     void decTemperatura( );
     void mostrarStatus( ) const;
     
+    void registarManutencao(int, int, int);
+    
 private:
 
     bool onoff;    
