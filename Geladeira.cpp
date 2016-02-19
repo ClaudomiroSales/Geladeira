@@ -126,11 +126,9 @@ void Geladeira::listarResidentes( ) const
     
 }
 
-void Geladeira::registrarProdutos( const Data  * const dataValidade )
+void Geladeira::registrarProdutos( Data * const dataValidade )
 {
-    dataValidadeMaisRecente->setDia(dataValidade->getDia());
-    dataValidadeMaisRecente->setMes(dataValidade->getMes());
-    dataValidadeMaisRecente->setAno(dataValidade->getAno());
+    dataValidadeMaisRecente = dataValidade;
     
     cout << "A data de validade a vencer primeiro eh: ";
     dataValidadeMaisRecente->print( );

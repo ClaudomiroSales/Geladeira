@@ -26,7 +26,7 @@ public:
     
     void listarResidentes( ) const;
     
-    void registrarProdutos( const Data * const );    
+    void registrarProdutos( Data * const );    
     
     
 private:
