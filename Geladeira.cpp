@@ -82,36 +82,41 @@ void Geladeira::registarManutencao(int dia, int mes, int ano)
 
 void Geladeira::adicionarResidentes(const string &novoResidente)
 {
-    if( numResidentes != 0 )
+    if( onoff )
     {
-        string * aux = new string[ numResidentes ];
-        
-        for(int i = 0; i < numResidentes; i++)
-            aux[ i ] = residentes[ i ];
-        
-        delete [ ] residentes;
-        
-        residentes = new string[ ++numResidentes ] ;
-        
-        for(int i = 0; i < numResidentes-1; i++)
-            residentes[ i ] = aux[ i ];
+        if( numResidentes != 0 )
+        {
+            string * aux = new string[ numResidentes ];
             
-        residentes[ numResidentes - 1 ] = novoResidente;
+            for(int i = 0; i < numResidentes; i++)
+                aux[ i ] = residentes[ i ];
             
-        delete [ ] aux;
-        
+            delete [ ] residentes;
+            
+            residentes = new string[ ++numResidentes ] ;
+            
+            for(int i = 0; i < numResidentes-1; i++)
+                residentes[ i ] = aux[ i ];
+                
+            residentes[ numResidentes - 1 ] = novoResidente;
+                
+            delete [ ] aux;
+            
+        }
+        else
+        {
+            residentes = new string[++numResidentes];
+            residentes[0] = novoResidente;
+        }
     }
     else
-    {
-        residentes = new string[++numResidentes];
-        residentes[0] = novoResidente;
-    }
+        cout << "Geladeira desligada";
 }
 
 void Geladeira::listarResidentes( ) const
 {
     if ( numResidentes > 0)
-        for(int i = 0; i < numResidentes-1; i++)
+        for(int i = 0; i < numResidentes; i++)
             cout << residentes[ i ] << '\n';
      else
          cout << "Nenhum residente cadastrado.";
