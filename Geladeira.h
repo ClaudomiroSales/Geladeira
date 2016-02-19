@@ -1,5 +1,9 @@
+#include "Data.h"
+
 #ifndef GELADEIRA_H
 #define GELADEIRA_H
+
+
 
 class Geladeira
 {
@@ -16,6 +20,8 @@ private:
 
     bool onoff;    
     float temperatura;
+    
+    Data ultimaManutencao;      //Deve ser inicializada em todos os construtores de Geladeira
 
 };
 

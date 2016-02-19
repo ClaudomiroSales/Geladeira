@@ -4,6 +4,7 @@
 using std::cout;
 
 Geladeira::Geladeira()
+:ultimaManutencao() //Chamando o construtor de cópia de Data, tem de colocar o parêntese mesmo que não tenha parâmetros
 {
     onoff = false;
     temperatura = 0;
@@ -55,8 +56,12 @@ void Geladeira::decTemperatura( )
 void Geladeira::mostrarStatus( ) const
 {
     if( onoff )
+    {
         cout << "Geladeira codigo HHHH funcionando corretamente. A temperatura interna eh " << temperatura
-             << ". Faltam X dias para fazer a manuntecao preventiva!\n";
+             << "\nA ultima manutencao foi: "; 
+             ultimaManutencao.print();
+        cout << ".\nFaltam X dias para fazer a manuntecao preventiva!\n";
+    }
     else
         cout << "Geladeira desligada.\n";
 }

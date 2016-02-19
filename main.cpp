@@ -9,14 +9,7 @@ int main(int argc, char **argv)
     
     consol.ligar( );
     
-    consol.incTemperatura( );
-    
-    consol.decTemperatura( );
-    
-    consol.decTemperatura( );
-    
-    consol.decTemperatura( );
-    
+        
     consol.mostrarStatus( );
     
 
