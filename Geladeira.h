@@ -26,6 +26,7 @@ public:
     
     void listarResidentes( ) const;
     
+    void registrarProdutos( const Data * const );    
     
     
 private:
@@ -37,6 +38,8 @@ private:
     
     string *residentes; //Quem mora na casa
     int numResidentes;
+    
+    Data *dataValidadeMaisRecente;
     
     
 

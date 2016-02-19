@@ -125,3 +125,14 @@ void Geladeira::listarResidentes( ) const
          cout << "Nenhum residente cadastrado.";
     
 }
+
+void Geladeira::registrarProdutos( const Data  * const dataValidade )
+{
+    dataValidadeMaisRecente->setDia(dataValidade->getDia());
+    dataValidadeMaisRecente->setMes(dataValidade->getMes());
+    dataValidadeMaisRecente->setAno(dataValidade->getAno());
+    
+    cout << "A data de validade a vencer primeiro eh: ";
+    dataValidadeMaisRecente->print( );
+    cout << "\n\n";
+}
