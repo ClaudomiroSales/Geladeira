@@ -8,6 +8,9 @@ Geladeira::Geladeira()
 {
     onoff = false;
     temperatura = 0;
+    
+    numResidentes = 0;
+    residentes = 0;
 }
 
 Geladeira::~Geladeira()
@@ -75,4 +78,32 @@ void Geladeira::registarManutencao(int dia, int mes, int ano)
     cout << "A manutencao atual eh ";
     ultimaManutencao.print();
     cout << '\n';
+}
+
+void Geladeira::adicionarResidentes(const string &novoResidente)
+{
+    if( numResidentes != 0 )
+    {
+        string * aux = new string[ numResidentes ];
+        
+        for(int i = 0; i < numResidentes; i++)
+            aux[ i ] = residentes[ i ];
+        
+        delete [ ] residentes;
+        
+        residentes = new string[ ++numResidentes ] ;
+        
+        for(int i = 0; i < numResidentes-1; i++)
+            residentes[ i ] = aux[ i ];
+            
+        residentes[ numResidentes - 1 ] = novoResidente;
+            
+        delete [ ] aux;
+        
+    }
+    else
+    {
+        residentes = new string[++numResidentes];
+        residentes[0] = novoResidente;
+    }
 }
