@@ -21,6 +21,10 @@ public:
     void setAno( int anoIn ) { if ( anoIn >= 0 ) ano = anoIn; }
     
     
+    int getDia( ) const { return dia; }
+    int getMes( ) const { return mes; }
+    int getAno( ) const { return ano; }
+    
 private:
     
     int mes;
