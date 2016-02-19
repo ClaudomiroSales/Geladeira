@@ -20,7 +20,7 @@ Data::Data(int d, int m, int a)
     else
         ano = a;
    
-    dia = VerificaDia(d);
+    dia = verificaDia(d);
 
 }
 
@@ -30,7 +30,7 @@ void Data::print() const
    
 }
 
-int Data::VerificaDia(int diaTeste) const
+int Data::verificaDia(int diaTeste) const
 {
     static const int diasPorMes[ 13 ] = 
        { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };

@@ -16,13 +16,18 @@ public:
     
     void print() const;
     
+    void setDia( int diaIn ) { dia = verificaDia( diaIn ); }
+    void setMes( int mesIn ) { if ( mesIn >= 1 && mesIn <= 12 ) mes = mesIn; }
+    void setAno( int anoIn ) { if ( anoIn >= 0 ) ano = anoIn; }
+    
+    
 private:
     
     int mes;
     int dia;
     int ano;
     
-    int VerificaDia( int ) const;
+    int verificaDia( int ) const;
 
 
 };
