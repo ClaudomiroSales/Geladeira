@@ -9,10 +9,14 @@ int main(int argc, char **argv)
     
     consol.ligar( );
     
-    consol.registarManutencao(1, 12, 2016);
-
+    consol.adicionarResidentes("Mico");
     
-    consol.mostrarStatus( );
+    consol.listarResidentes( );
+    
+    consol.adicionarResidentes( "Gabriela");
+    consol.adicionarResidentes("Mortandela");
+    
+    consol.listarResidentes( );
     
     
 
