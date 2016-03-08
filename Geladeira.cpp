@@ -43,7 +43,7 @@ void Geladeira::decTemperatura( )
 }
 
 
-void Geladeira::mostrarStatus( ) const
+/*void Geladeira::mostrarStatus( ) const
 {
     if( onoff )
     {
@@ -54,7 +54,7 @@ void Geladeira::mostrarStatus( ) const
     }
     else
         cout << "Geladeira desligada.\n";
-}
+}*/
 
 
 void Geladeira::adicionarResidentes(const string &novoResidente)

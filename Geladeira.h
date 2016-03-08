@@ -11,13 +11,15 @@ using std::string;
 
 class Geladeira : public Equipamento
 {
+    friend ostream &operator<<( ostream &, const Geladeira & );
+    
 public:
     Geladeira();
     ~Geladeira();
     
     void incTemperatura( );
     void decTemperatura( );
-    void mostrarStatus( ) const;
+    //void mostrarStatus( ) const;
     
        
     void adicionarResidentes( const string & );
