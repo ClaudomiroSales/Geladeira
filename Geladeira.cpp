@@ -13,6 +13,7 @@ Geladeira::Geladeira()
 
 Geladeira::~Geladeira()
 {
+    delete [] residentes;
 }
 
 
