@@ -102,3 +102,13 @@ void Geladeira::listarResidentes( ) const
          cout << "Nenhum residente cadastrado.";
     
 }
+
+
+ostream &operator<<( ostream &out, const Geladeira &outra )
+{
+    out << static_cast< Equipamento > (outra);
+    outra.listarResidentes();
+    
+    
+    return out;
+}
