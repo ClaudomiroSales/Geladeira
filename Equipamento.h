@@ -12,10 +12,17 @@ public:
     Equipamento();
     ~Equipamento();
     
+    void ligar( );
+    
+    void registarManutencao(int, int, int);
+    
     const Equipamento &operator=(const Equipamento &);
     
 private:
 
+    Data ultimaManutencao;      //Deve ser inicializada em todos os construtores de Geladeira
+    
+    bool onoff;    
     
 
 };

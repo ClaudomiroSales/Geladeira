@@ -14,13 +14,11 @@ public:
     Geladeira();
     ~Geladeira();
     
-    void ligar( );
     void incTemperatura( );
     void decTemperatura( );
     void mostrarStatus( ) const;
     
-    void registarManutencao(int, int, int);
-    
+       
     void adicionarResidentes( const string & );
     
     
@@ -30,10 +28,7 @@ public:
     
 private:
 
-    bool onoff;    
-    float temperatura;
-    
-    Data ultimaManutencao;      //Deve ser inicializada em todos os construtores de Geladeira
+    float temperatura;    
     
     string *residentes; //Quem mora na casa
     int numResidentes;
