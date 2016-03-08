@@ -107,7 +107,11 @@ void Geladeira::listarResidentes( ) const
 ostream &operator<<( ostream &out, const Geladeira &outra )
 {
     out << static_cast< Equipamento > (outra);
-    outra.listarResidentes();
+    if( outra.onoff )
+    {
+        outra.listarResidentes();
+        out << "A temperatura atual eh: " << outra.temperatura << '\n';
+    }
     
     
     return out;
