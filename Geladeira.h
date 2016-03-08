@@ -1,4 +1,5 @@
-#include "Data.h"
+#include "Equipamento.h"
+
 
 #include "string"
 using std::string;
@@ -8,7 +9,7 @@ using std::string;
 
 
 
-class Geladeira
+class Geladeira : public Equipamento
 {
 public:
     Geladeira();
