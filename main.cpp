@@ -5,19 +5,31 @@ using std::cout;
 
 int main(int argc, char **argv)
 {
-    Geladeira consol;
+    Geladeira consol, brastemp;
     
     consol.ligar( );
     
     consol.adicionarResidentes("Mico");
     
-    consol.listarResidentes( );
+    //consol.listarResidentes( );
     
     consol.adicionarResidentes( "Gabriela");
     consol.adicionarResidentes("Mortandela");
     
-    consol.listarResidentes( );
+    //consol.listarResidentes( );
     
+    brastemp = consol;
+    
+    Geladeira marvel( consol );
+    
+    cout << "\n\nConsol\n";
+    cout << consol;
+    cout << "\n\n";
+    cout << "Brastemp\n";
+    cout << brastemp;
+    cout << "\n\n";
+    cout << "Marvel\n";
+    cout << marvel;
     
 
         
