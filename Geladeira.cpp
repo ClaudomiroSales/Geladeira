@@ -87,7 +87,7 @@ void Geladeira::adicionarResidentes(const string &novoResidente)
         }
     }
     else
-        cout << "Geladeira desligada";
+        cout << "Geladeira desligada\n";
 }
 
 void Geladeira::listarResidentes( ) const
