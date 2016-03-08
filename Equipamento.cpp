@@ -37,8 +37,23 @@ void Equipamento::registarManutencao(int dia, int mes, int ano)
     ultimaManutencao.setMes(mes);
     ultimaManutencao.setAno(ano);
     
-    cout << "A manutencao atual eh ";
-    ultimaManutencao.print();
+    cout << "A manutencao atual eh " << ultimaManutencao;
     cout << '\n';
+}
+
+
+ostream &operator<<(ostream &out, const Equipamento &equip)
+{
+    if ( equip.onoff )
+    {   
+        out << "Imprimindo status:\n";
+        
+        out << "A data da ultima manutencao foi: " << equip.ultimaManutencao << '\n';
+    }
+    else
+        out << "Equipamento desligado.\n";
+        
+    return out;
+
 }
 
