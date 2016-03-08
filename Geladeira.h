@@ -28,6 +28,10 @@ public:
     void listarResidentes( ) const;
     
     
+    const Geladeira &operator=( const Geladeira & );
+
+    
+    
     
 private:
 

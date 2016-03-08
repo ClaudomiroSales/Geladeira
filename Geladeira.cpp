@@ -43,6 +43,29 @@ void Geladeira::decTemperatura( )
 }
 
 
+const Geladeira &Geladeira::operator=( const Geladeira &outra )
+{
+    
+    static_cast< Equipamento > ( *this ) = Equipamento( static_cast< Equipamento > (outra) );
+    
+    onoff = outra.onoff;    
+    
+    temperatura = outra.temperatura;
+    
+    numResidentes = outra.numResidentes;
+    
+    delete [ ] residentes;
+
+    residentes = new string[ numResidentes ];
+    
+    for( int i  = 0; i < numResidentes; i++ )
+        residentes[ i ] = outra.residentes[ i ];
+    
+    
+    return *this;
+    
+}
+
 /*void Geladeira::mostrarStatus( ) const
 {
     if( onoff )
