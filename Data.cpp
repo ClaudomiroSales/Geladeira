@@ -24,6 +24,13 @@ Data::Data(int d, int m, int a)
 
 }
 
+Data::Data( const Data &outraData )
+{
+    this->dia =  outraData.dia;
+    this->mes =  outraData.mes;
+    this->ano =  outraData.ano;
+}
+
 void Data::print() const
 {
    cout << dia << '/' << mes << '/' << ano;

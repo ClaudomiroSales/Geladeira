@@ -14,6 +14,8 @@ public:
     
     Data( int = 1, int = 1, int = 1900 );
     
+    Data( const Data & );
+    
     void print() const;
     
     void setDia( int diaIn ) { dia = verificaDia( diaIn ); }
