@@ -31,11 +31,11 @@ Data::Data( const Data &outraData )
     this->ano =  outraData.ano;
 }
 
-void Data::print() const
+ostream &operator<<( ostream &out, const Data & data )
 {
-   cout << dia << '/' << mes << '/' << ano;
-   
+    out << data.dia << '/' << data.mes << '/' << data.ano;
 }
+
 
 int Data::verificaDia(int diaTeste) const
 {
