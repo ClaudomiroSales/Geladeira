@@ -23,11 +23,14 @@ public:
     
     const Equipamento &operator=(const Equipamento &);
     
-private:
+protected:
 
+   bool onoff;    
+  
+  
+private:
+  
     Data ultimaManutencao;      //Deve ser inicializada em todos os construtores de Geladeira
-    
-    bool onoff;    
     
 
 };

@@ -1,5 +1,8 @@
 #include "Equipamento.h"
 
+#include <iostream>
+using std::cout;
+
 Equipamento::Equipamento()
 :ultimaManutencao() //Chamando o construtor de cópia de Data, tem de colocar o parêntese mesmo que não tenha parâmetros
 {
@@ -7,15 +10,16 @@ Equipamento::Equipamento()
 }
 
 Equipamento::Equipamento( const Equipamento &outro )
+:ultimaManutencao( outro.ultimaManutencao )
 {
-    
+    this->onoff =  outro.onoff;
 }
 
 Equipamento::~Equipamento()
 {
 }
 
-void Geladeira::ligar( )
+void Equipamento::ligar( )
 {
     if ( !onoff )
     {
@@ -27,7 +31,7 @@ void Geladeira::ligar( )
 }
 
 
-void Geladeira::registarManutencao(int dia, int mes, int ano)
+void Equipamento::registarManutencao(int dia, int mes, int ano)
 {
     ultimaManutencao.setDia(dia);
     ultimaManutencao.setMes(mes);
