@@ -25,6 +25,8 @@ public:
     void setMes( int mesIn ) { if ( mesIn >= 1 && mesIn <= 12 ) mes = mesIn; }
     void setAno( int anoIn ) { if ( anoIn >= 0 ) ano = anoIn; }
     
+    const Data &operator=(const Data &);
+    
     
 private:
     

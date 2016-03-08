@@ -31,6 +31,14 @@ Data::Data( const Data &outraData )
     this->ano =  outraData.ano;
 }
 
+
+const Data &Data::operator=(const Data &outraData)
+{
+    this->dia =  outraData.dia;
+    this->mes =  outraData.mes;
+    this->ano =  outraData.ano;
+}
+
 ostream &operator<<( ostream &out, const Data & data )
 {
     out << data.dia << '/' << data.mes << '/' << data.ano;
