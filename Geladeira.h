@@ -15,6 +15,7 @@ class Geladeira : public Equipamento
     
 public:
     Geladeira();
+    Geladeira( const Geladeira & );
     ~Geladeira();
     
     void incTemperatura( );

@@ -11,6 +11,24 @@ Geladeira::Geladeira()
     residentes = 0;
 }
 
+Geladeira::Geladeira( const Geladeira &outra )
+:Equipamento( static_cast<Equipamento> ( outra ) )
+{
+    
+    onoff = outra.onoff;    
+    
+    temperatura = outra.temperatura;
+    
+    numResidentes = outra.numResidentes;    
+
+    residentes = new string[ numResidentes ];
+    
+    for( int i  = 0; i < numResidentes; i++ )
+        residentes[ i ] = outra.residentes[ i ];
+    
+    
+}
+
 Geladeira::~Geladeira()
 {
     delete [] residentes;
