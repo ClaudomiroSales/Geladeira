@@ -15,6 +15,14 @@ Equipamento::Equipamento( const Equipamento &outro )
     this->onoff =  outro.onoff;
 }
 
+
+ const Equipamento &Equipamento::operator=(const Equipamento &outro)
+ {
+     ultimaManutencao =  outro.ultimaManutencao;
+     onoff = outro.onoff;
+          
+ }
+
 Equipamento::~Equipamento()
 {
 }
