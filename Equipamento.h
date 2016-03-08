@@ -1,6 +1,8 @@
 #include <ostream>
 using std::ostream;
 
+#include "Data.h"
+
 #ifndef EQUIPAMENTO_H
 #define EQUIPAMENTO_H
 
@@ -10,7 +12,10 @@ class Equipamento
     
 public:
     Equipamento();
+    Equipamento( const Equipamento & );
+    
     ~Equipamento();
+    
     
     void ligar( );
     

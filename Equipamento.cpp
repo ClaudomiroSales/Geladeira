@@ -6,6 +6,11 @@ Equipamento::Equipamento()
     onoff = false;
 }
 
+Equipamento::Equipamento( const Equipamento &outro )
+{
+    
+}
+
 Equipamento::~Equipamento()
 {
 }
